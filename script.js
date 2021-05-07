@@ -15,29 +15,6 @@ function computerPlay() {
     }
     return selection;
 }
-computerPlay();
-
-let playerSelection;
-function playerPlay() {
-    playerSelection = prompt("rock, paper, scissors!", "").toLowerCase();
-    switch(playerSelection) {
-        case "scissors":
-        break;
-        
-        case "paper":
-        break;
-
-        case "rock":
-        break;
-
-        default:
-        alert("Please provide a correct answer!");
-    }
-    return playerSelection;
-}
-
-const computerSelection = computerPlay();
-console.log(computerSelection);
 
 function playRound(computerSelection, playerSelection) {
     computerSelection = computerPlay();
@@ -55,7 +32,6 @@ function playRound(computerSelection, playerSelection) {
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
         alert("Computer chose Rock, you lose!")
     } else {
-        alert("Computer chose " + playerSelection + " ,it's a draw!")
+        alert("Computer chose " + computerSelection + ", it's a draw!")
     }
 };
-playRound();
