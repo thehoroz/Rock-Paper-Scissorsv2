@@ -12,7 +12,7 @@ body {
     border-radius: 20%;    
 }
 #rockcontainer:hover {
-    transform:rotate(10deg) scale(1.1);
+    transform: scale(1.1);
     cursor: pointer;
     left: 25px;
 }
@@ -131,4 +131,54 @@ body {
     right: 30px;
     bottom: 10px;
     background:linear-gradient(45deg, rgb(10, 1, 41), rgb(200, 230, 230));
+}
+
+#scissorcontainer {
+    width: 150px;
+    height: 140px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    transform: rotate(-0deg);
+}
+
+.blade1 {
+    width: 9px;
+    height: 120px;
+    background: linear-gradient(30deg, rgb(65, 65, 65), rgb(200, 202, 202));
+    border-radius: 0 20px 0 0;
+}
+
+.blade1::after {
+    content: "";
+    width: 9px;
+    height: 120px;
+    background: linear-gradient(60deg, rgb(61, 61, 61), rgb(225, 230, 230));;
+    border-radius: 20px 0 0 0;
+    position: absolute;
+    transform:rotate(-70deg);
+}
+
+.handle1 {
+    height: 15px;
+    width: 15px;
+    background: rgb(63, 72, 82);
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px red;
+    bottom: 17px;
+    left: 60px;
+}
+
+.handle2 {
+    height: 15px;
+    width: 15px;
+    background: rgb(63, 72, 82);
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px red;
+    bottom: 55px;
+    right: 20px;
 }
