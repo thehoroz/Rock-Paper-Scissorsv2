@@ -1,5 +1,19 @@
 body {
-    background-color: rgb(63, 72, 82);
+    background-color: rgb(0, 168, 140);
+}
+
+#maincontainer {
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    top: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 650px;
+    height: 150px;
+    border: 3px solid rgb(45, 98, 72);
+    border-radius: 30px;
 }
 
 #rockcontainer {
@@ -9,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20%;    
+    border-radius: 20%;
 }
 #rockcontainer:hover {
     transform: scale(1.1);
@@ -142,6 +156,7 @@ body {
     align-items: center;
     border-radius: 20%;
     transform: rotate(-0deg);
+    order: 1;
 }
 
 #scissorcontainer:hover {
@@ -209,4 +224,14 @@ body {
     bottom: 50px;
     transform: rotate(290deg);
     right: 35px;
+}
+
+#papercontainer {
+    height: 150px;
+    width: 150px;
+}
+
+#papercontainer:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
