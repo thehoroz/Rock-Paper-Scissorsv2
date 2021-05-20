@@ -144,6 +144,12 @@ body {
     transform: rotate(-0deg);
 }
 
+#scissorcontainer:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+    left: 25px;
+}
+
 .blade1 {
     width: 9px;
     height: 120px;
@@ -167,9 +173,9 @@ body {
     background: rgb(63, 72, 82);
     position: absolute;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px red;
+    box-shadow: 0 0 0 10px rgb(206, 197, 124);
     bottom: 17px;
-    left: 60px;
+    left: 65px;
 }
 
 .handle2 {
@@ -178,7 +184,29 @@ body {
     background: rgb(63, 72, 82);
     position: absolute;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px red;
-    bottom: 55px;
-    right: 20px;
+    box-shadow: 0 0 0 10px rgb(206, 197, 124);
+    bottom: 48px;
+    right: 18px;
+}
+
+.handle-bottom1 {
+    border-bottom: 20px solid rgb(206, 197, 124);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    height: 0px;
+    width: 10px;
+    position: absolute;
+    bottom: 34px;
+}
+
+.handle-bottom2 {
+    border-bottom: 20px solid rgb(206, 197, 124);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    height: 0px;
+    width: 10px;
+    position: absolute;
+    bottom: 50px;
+    transform: rotate(290deg);
+    right: 35px;
 }
