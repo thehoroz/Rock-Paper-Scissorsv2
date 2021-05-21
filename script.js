@@ -2,15 +2,15 @@ function computerPlay() {
     let selection = Math.floor(Math.random() *3 ) + 1;
     switch(selection) {
         case 1:
-        selection = "scissors";
+        selection = "Scissors";
         break;
         
         case 2:
-        selection = "rock";
+        selection = "Rock";
         break;
 
         case 3:
-        selection = "paper";
+        selection = "Paper";
         break;
     }
     return selection;
@@ -18,17 +18,17 @@ function computerPlay() {
 
 function playRound(computerSelection, playerSelection) {
     computerSelection = computerPlay();
-    if (playerSelection == 'rock' && computerSelection == 'paper') {
+    if (playerSelection == 'Rock' && computerSelection == 'Paper') {
         alert("Computer chose Paper, you lose!")
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    } else if (playerSelection == 'Rock' && computerSelection == 'Scissors') {
         alert("Computer chose Scissors, you win!")
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+    } else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
         alert("Computer chose Rock, you win!")
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+    } else if (playerSelection == 'Paper' && computerSelection == 'Scissors') {
         alert("Computer chose Scissors, you lose!")
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+    } else if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
         alert("Computer chose Paper, you win!")
-    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+    } else if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
         alert("Computer chose Rock, you lose!")
     } else {
         alert("Computer chose " + computerSelection + ", it's a draw!")
@@ -37,17 +37,17 @@ function playRound(computerSelection, playerSelection) {
 
 const rockbtn = document.querySelector('#rockcontainer');
 rockbtn.addEventListener('click', () => {
-  playRound('', 'rock');
+  playRound('', 'Rock');
 });
 
 const paperbtn = document.querySelector('#papercontainer');
 paperbtn.addEventListener('click', () => {
-  playerSelection = 'paper';
-  playRound('', 'paper');
+  playerSelection = 'Paper';
+  playRound('', 'Paper');
 });
 
 const scissorbtn = document.querySelector('#scissorcontainer');
 scissorbtn.addEventListener('click', () => {
-  playerSelection = 'scissors';
-  playRound('', 'scissor');
+  playerSelection = 'Scissors';
+  playRound('', 'Scissors');
 });

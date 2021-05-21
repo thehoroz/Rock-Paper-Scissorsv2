@@ -187,7 +187,7 @@ body {
 .handle1 {
     height: 15px;
     width: 15px;
-    background: rgb(63, 72, 82);
+    background: rgb(0, 168, 140);
     position: absolute;
     border-radius: 50%;
     box-shadow: 0 0 0 10px rgb(206, 197, 124);
@@ -198,7 +198,7 @@ body {
 .handle2 {
     height: 15px;
     width: 15px;
-    background: rgb(63, 72, 82);
+    background: rgb(0, 168, 140);
     position: absolute;
     border-radius: 50%;
     box-shadow: 0 0 0 10px rgb(206, 197, 124);
