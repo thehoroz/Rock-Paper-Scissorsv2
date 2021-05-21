@@ -228,6 +228,77 @@ body {
     right: 35px;
 }
 
+.eye1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: black;
+    left: 40px;
+    top: 50px;
+}
+
+.eye2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: black;
+    left: 66px;
+    top: 30px;
+}
+
+.circle {
+    position: relative;
+    height: 4px;
+    width: 4px;
+    background: white;
+    border-radius: 50%;
+}
+
+.circle.circle1 {
+    left: 12px;
+    bottom: 4px;
+    position: absolute;
+}
+
+.circle.circle2 {
+    top: 3px;
+    left: 2px;
+    height: 8px;
+    width: 8px;
+}
+
+.circle.circle3 {
+    left: 12px;
+    bottom: 4px;
+    position: absolute;
+}
+
+.circle.circle4 {
+    top: 3px;
+    left: 2px;
+    height: 8px;
+    width: 8px;
+}
+
+.mouthouter {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    border-radius: 0 0 150px 150px;
+    background: black;
+}
+
+.mouthinner {
+    position: absolute;
+    width: 16px;
+    height: 8px;
+    border-radius: 0 0 150px 150px;
+    background: white;
+
+}
+
 #papercontainer {
     height: 150px;
     width: 150px;
