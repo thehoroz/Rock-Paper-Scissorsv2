@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     width: 650px;
     height: 150px;
-    border: 3px solid rgb(45, 98, 72);
+    border: 3px solid rgb(197, 251, 231);
     border-radius: 30px;
 }
 
@@ -24,11 +24,12 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 20%;
+    background: none;
+    border: none;
 }
 #rockcontainer:hover {
     transform: scale(1.1);
     cursor: pointer;
-    left: 25px;
 }
 
 .rockbody {
@@ -157,12 +158,13 @@ body {
     border-radius: 20%;
     transform: rotate(-0deg);
     order: 1;
+    background: none;
+    border: none;
 }
 
 #scissorcontainer:hover {
-    transform: rotate(90deg);
+    transform: scale(1.1) rotate(40deg);
     cursor: pointer;
-    left: 25px;
 }
 
 .blade1 {
@@ -229,6 +231,8 @@ body {
 #papercontainer {
     height: 150px;
     width: 150px;
+    background: none;
+    border: none;
 }
 
 #papercontainer:hover {

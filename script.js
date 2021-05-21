@@ -18,7 +18,6 @@ function computerPlay() {
 
 function playRound(computerSelection, playerSelection) {
     computerSelection = computerPlay();
-    playerSelection = playerPlay();
     if (playerSelection == 'rock' && computerSelection == 'paper') {
         alert("Computer chose Paper, you lose!")
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
@@ -26,7 +25,7 @@ function playRound(computerSelection, playerSelection) {
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
         alert("Computer chose Rock, you win!")
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        alert("Computer chose scissors, you lose!")
+        alert("Computer chose Scissors, you lose!")
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         alert("Computer chose Paper, you win!")
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
@@ -35,3 +34,20 @@ function playRound(computerSelection, playerSelection) {
         alert("Computer chose " + computerSelection + ", it's a draw!")
     }
 };
+
+const rockbtn = document.querySelector('#rockcontainer');
+rockbtn.addEventListener('click', () => {
+  playRound('', 'rock');
+});
+
+const paperbtn = document.querySelector('#papercontainer');
+paperbtn.addEventListener('click', () => {
+  playerSelection = 'paper';
+  playRound('', 'paper');
+});
+
+const scissorbtn = document.querySelector('#scissorcontainer');
+scissorbtn.addEventListener('click', () => {
+  playerSelection = 'scissors';
+  playRound('', 'scissor');
+});
