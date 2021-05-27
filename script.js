@@ -1,3 +1,9 @@
+let playerScore = 0;
+let computerScore = 0;
+const announcement = document.querySelector(".announcement")
+const playerScoreboard = document.querySelector(".playerscoreboard")
+const computerScoreboard = document.querySelector(".computerscoreboard")
+
 function computerPlay() {
     let selection = Math.floor(Math.random() *3 ) + 1;
     switch(selection) {
@@ -15,52 +21,80 @@ function computerPlay() {
     }
     return selection;
 }
-
-let playerScore = 0;
-let computerScore = 0;
-
-//score works, but can't get the resetScore to work, will figure it out later
+// had to make it into *= rather than just *. It works now.
 function resetScore(){
-    if (playerScore == 5 || computerScore == 5){
-        playerScore * 0;
-        computerScore * 0;
+    if (playerScore == 5){
+        alert("You win! Reset the score and play again!")
+        playerScore *= 0;
+        computerScore *= 0;
+        playerScoreboard.textContent = "Player: " + playerScore;
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        announcement.textContent = "Good job! Now win again!";
+
+    } else if (computerScore == 5){
+        alert("You lose! Reset the score and play again!")
+        playerScore *= 0;
+        computerScore *= 0;
+        playerScoreboard.textContent = "Player: " + playerScore;
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        announcement.textContent = "Too bad.. but try again!";
     }
-    else {return};
 }
 
 function addPlayerScore() {
-    resetScore();
     ++playerScore
 };
 
 function addComputerScore(){
-    resetScore();
     ++computerScore;
 }
 
 function playRound(computerSelection, playerSelection) {
     computerSelection = computerPlay();
-    resetScore();
     if (playerSelection == 'Rock' && computerSelection == 'Paper') {
-        alert("Computer chose Paper, you lose!")
+        announcement.textContent = "Computer chose Paper, you lose!";
         addComputerScore();
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        playerScoreboard.textContent = "Player: " + playerScore;
+        resetScore();
+
     } else if (playerSelection == 'Rock' && computerSelection == 'Scissors') {
-        alert("Computer chose Scissors, you win!")
+        announcement.textContent = "Computer chose Scissors, you win!";
         addPlayerScore()
+        playerScoreboard.textContent = "Player: " + playerScore;
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        resetScore();
+
     } else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
-        alert("Computer chose Rock, you win!")
+        announcement.textContent = "Computer chose Rock, you win!";
         addPlayerScore()
+        playerScoreboard.textContent = "Player: " + playerScore;
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        resetScore();
+
     } else if (playerSelection == 'Paper' && computerSelection == 'Scissors') {
-        alert("Computer chose Scissors, you lose!")
+        announcement.textContent = "Computer chose Scissors, you lose!";
         addComputerScore()
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        playerScoreboard.textContent = "Player: " + playerScore;
+        resetScore();
+
     } else if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
-        alert("Computer chose Paper, you win!")
+        announcement.textContent = "Computer chose Paper, you win!";
         addPlayerScore()
+        playerScoreboard.textContent = "Player: " + playerScore;
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        resetScore();
+
     } else if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
-        alert("Computer chose Rock, you lose!")
+        announcement.textContent = "Computer chose Rock, you lose!";
         addComputerScore()
+        computerScoreboard.textContent = "Computer: " + computerScore;
+        playerScoreboard.textContent = "Player: " + playerScore;
+        resetScore();
+
     } else {
-        alert("Computer chose " + computerSelection + ", it's a draw!")
+        announcement.textContent = "Computer also chose " + computerSelection + ", it's a draw!";
     }
     console.log(playerScore);
     console.log(computerScore);

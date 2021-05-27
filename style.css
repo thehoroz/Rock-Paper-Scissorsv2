@@ -2,6 +2,34 @@ body {
     background-color: rgb(0, 168, 140);
 }
 
+#scorecontainer {
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    width: 600px;
+    height: auto;
+    background: transparent;
+    top: 250px;
+    border: 3px solid rgb(197, 251, 231);
+    border-radius: 30px;
+}
+
+.computerscoreboard {
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.playerscoreboard {
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.announcement {
+    text-align: center;
+    font-size: 17px;
+    font-family: monospace;
+}
+
 #maincontainer {
     margin: auto;
     padding: 10px;
