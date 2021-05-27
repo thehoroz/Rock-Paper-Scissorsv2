@@ -10,7 +10,7 @@ The concept is very simple. The 3 images (Rock paper and scissors) are buttons. 
 
 The playRound function will first execute the computerPlay function. The computerPlay function randomly generates Rock, Paper or Scissors and will store its outcome into computerSelection.
 
-The playRound function will then continue to the if statements in search of a fitting outcome. According to the if statement, their will be an incremention to the playerScore or the computerScore.
+The playRound function will then continue to the if statements in search of a fitting outcome. According to the if statement, there will be an incremention to the playerScore or the computerScore.
 
 At last playRound will execute it's last function, resetScore. The score will be displayed on the scoreboard through the DOM manipulation with childnode.textContent. 
 
